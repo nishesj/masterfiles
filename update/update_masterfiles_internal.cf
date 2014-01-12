@@ -15,7 +15,7 @@ bundle agent cfe_internal_update_from_repository
       depends_on => { "masterfiles_update_fetch" },
       contain => u_no_output;
 
-      "$(git) reset --hard origin/master"   # change to your branch
+      "$(git) reset --hard origin/CF_WORKING_BRANCH"   # change to your branch
       handle => "masterfiles_update_reset",
       depends_on => { "masterfiles_update_stash" },
       contain => u_no_output;
